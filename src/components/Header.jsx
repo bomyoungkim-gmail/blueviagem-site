@@ -38,8 +38,8 @@ const Header = () => {
   return (
     <header 
       style={{ 
-        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'white',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        backgroundColor: (scrolled && !isOpen) ? 'rgba(255, 255, 255, 0.95)' : 'white',
+        backdropFilter: (scrolled && !isOpen) ? 'blur(10px)' : 'none',
         position: 'sticky',
         top: 0,
         zIndex: 1000,
