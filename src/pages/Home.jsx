@@ -15,7 +15,7 @@ const Home = () => {
       <div id="features"><Benefits /></div>
       
       <SectionDivider 
-        image={`${import.meta.env.BASE_URL}divider-skyline.png`}`,
+        image={`${import.meta.env.BASE_URL}divider-skyline.png`}
         title="Alcance Global, Atendimento Local"
         subtitle="Conectamos sua empresa aos melhores destinos de negócios com suporte em tempo real."
       />
