@@ -12,7 +12,7 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(/hero-new.png)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}hero-new.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.4, // Darken background to let text pop
