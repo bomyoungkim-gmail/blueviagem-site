@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #004080;
+  --color-primary-hover: #003366;
+  --color-secondary: #0073e6;
+  --color-secondary-hover: #005bb5;
+  --color-accent: #f0f4f8;
+  --color-background: #ffffff;
+  --color-text-main: #333333;
+  --color-text-secondary: #666666;
+  --color-border: #e0e0e0;
+  --color-error: #d32f2f;
+  --color-success: #388e3c;
+
+  /* Typography */
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-section: 80px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-white {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.btn-white:hover {
+    border-color: var(--color-primary);
+}
+
+.text-center { text-align: center; }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.section-padding { padding-top: var(--spacing-section); padding-bottom: var(--spacing-section); }
+
+/* Navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.desktop-nav a {
+    font-weight: 500;
+}
+
+.desktop-nav a:hover {
+    color: var(--color-secondary);
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex; 
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 24px;
+        box-shadow: var(--shadow-md);
+        z-index: 1000;
+        gap: 24px;
+    }
+
+    .mobile-menu a {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--color-accent);
+    }
+    
+    .section-padding { padding-top: 40px; padding-bottom: 40px; }
+    h1 { font-size: 32px !important; }
+    h2 { font-size: 28px !important; }
+}
